@@ -2,8 +2,15 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+
+type ArticleWithSlug = {
+  slug: string
+  title: string
+  date: string 
+  description: string
+}
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -41,7 +48,15 @@ export const metadata: Metadata = {
 }
 
 export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+  // getAllArticles is an async function exported from your JS file
+  let articles = (await getAllArticles()) as ArticleWithSlug[]
+
+  // normalize/filter out any entries that don't have the required fields
+  articles = articles.filter((article) => {
+    if (!article || !article.date) return false
+    const d = new Date(article.date)
+    return !Number.isNaN(d.getTime())
+  })
 
   // Only include articles whose date is today or in the past
   const today = new Date()
@@ -52,6 +67,9 @@ export default async function ArticlesIndex() {
     articleDate.setHours(0, 0, 0, 0)
     return articleDate <= today
   })
+
+  // (optional) ensure articles are sorted by date desc if your getAllArticles doesn't already
+  articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return (
     <SimpleLayout

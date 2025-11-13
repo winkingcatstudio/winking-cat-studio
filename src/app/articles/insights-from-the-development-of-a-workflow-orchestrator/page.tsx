@@ -1,8 +1,10 @@
+// src/app/articles/insights-from-the-development-of-a-workflow-orchestrator/page.tsx
 import Image from 'next/image'
 import { ArticleLayout } from '@/components/ArticleLayout'
 import academicRadiology from './insightsFromDevelopment.png'
+import type { Metadata } from 'next'
 
-export const article = {
+const article = {
   author: 'Dan Kercher',
   date: '2025-11-11',
   title: 'Insights from the Development of a Workflow Orchestrator',
@@ -10,12 +12,12 @@ export const article = {
     'Divided attention poses substantial practical problems that radiology departments need to take seriously.',
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default function Page(props) {
+export default function Page(props: any) {
   return (
     <ArticleLayout article={article} {...props}>
       <p>
@@ -31,9 +33,9 @@ export default function Page(props) {
 
       <Image
         src={academicRadiology}
-        alt=""
-        width={800}  // set your actual image width
-        height={600} // set your actual image height
+        alt="Radiology workflow illustration"
+        width={800}
+        height={600}
         unoptimized
       />
 

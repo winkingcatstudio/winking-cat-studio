@@ -6,8 +6,8 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
+import { getAllArticles } from '@/lib/getAllArticles'
+import { formatDate, parseDateInput } from '@/lib/formatDate'
 const logoIU = '/images/logos/iuTrident.png'
 const logoDiceCats = '/images/logos/diceCats.png'
 const logoNewDay = '/images/logos/logoNewDay.png'
@@ -77,6 +77,14 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+type ArticleWithSlug = {
+  slug: string
+  title: string
+  date: string // ISO string expected from getAllArticles
+  description: string
+}
+
+// 👇 define Article FIRST
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="article">
@@ -285,9 +293,18 @@ export default async function Home() {
   // Get all articles
   let allArticles = await getAllArticles()
 
-  // Filter out future-dated ones
-  let articles = allArticles
-    .filter((article) => new Date(article.date) <= new Date())
+  // Create a "today" midnight to compare date-only values
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+
+  // Filter: skip invalid dates or future-dated articles (compare date-only)
+  const articles = allArticles
+    .filter((article) => {
+      const d = parseDateInput(article.date)
+      if (!d) return false
+      d.setHours(0, 0, 0, 0)
+      return d.getTime() <= today.getTime()
+    })
     .slice(0, 4)
 
   return (
