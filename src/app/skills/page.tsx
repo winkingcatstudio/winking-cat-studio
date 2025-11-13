@@ -43,7 +43,7 @@ export const metadata = {
 export default function Skills() {
   return (
     <SimpleLayout
-      title="Skills and tools I use to design, build, and deliver great software."
+      title="Skills and tools I use to design, build, deliver, and support impactful products."
       intro="I'm a full-stack developer and designer, who bridges technical depth with creative problem-solving. Here's a look at the core technologies and principles I use in my work."
     >
       <div className="space-y-20">
@@ -57,7 +57,7 @@ export default function Skills() {
           </Tool>
           <Tool title="Web Technologies">
             {`My recent work has centered around modern web stacks, React,
-            Next.js, and Node, along with backend frameworks like Ruby on Rails
+            Next.js, Node, Ruby on Rails, enhanced with frameworks Tailwind
             and Express. I build full-stack applications that are fast,
             accessible, and resilient.`}
           </Tool>
