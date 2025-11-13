@@ -12,10 +12,10 @@ const logoIU = '/images/logos/iuTrident.png'
 const logoDiceCats = '/images/logos/diceCats.png'
 const logoNewDay = '/images/logos/logoNewDay.png'
 const logoPurdue = '/images/logos/logoPurdue.png'
-const image1 = '/images/photos/radiology.jpg'
+const image1 = '/images/photos/diceCats.jpg'
 const image2 = '/images/photos/programming.jpg'
 const image3 = '/images/photos/sewerScum.jpg'
-const image4 = '/images/photos/diceCats.jpg'
+const image4 = '/images/photos/radiology.jpg'
 const image5 = '/images/photos/indy.jpg'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -255,13 +255,14 @@ function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+    <div className="mt-8 sm:mt-20">
+      {' '}
+      <div className="-my-2 flex justify-center gap-2 overflow-hidden py-2 sm:gap-8 sm:py-4">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-2xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              'relative aspect-[9/10] w-28 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-44 md:w-72 dark:bg-zinc-800',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -320,7 +321,7 @@ export default async function Home() {
 
       <Photos />
 
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-12 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
