@@ -315,11 +315,11 @@ export default async function Home() {
             Software Developer and Tabletop Game Designer
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {`Hi! I'm Dan Kercher, a software developer located in Indianapolis,
-            Indiana. I started Winking Cat Studio as a way to organize my
-            personal, academic, and professional projects. In my current role, I
-            specialize in novel software developement for clinical Radiology
-            workflows.`}
+            {`Hi! I'm Dan Kercher, a software developer and tabletop roleplaying 
+            game designer located in Indianapolis, Indiana. I started Winking Cat 
+            Studio as a way to organize my personal, academic, and professional 
+            projects. In my current role, I specialize in novel software 
+            development for clinical radiology workflows.`}
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

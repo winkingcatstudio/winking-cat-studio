@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s - Dan Kercher',
     default: 'Winking Cat Studio - Software Development and Game Design',
   },
-  description: `Hi! I'm Dan Kercher, a software developer located in Indianapolis, Indiana. I started Winking Cat Studio as a way to organize my personal, academic, and professional projects.`,
+  description: `Hi! I'm Dan Kercher, a software developer and tabletop roleplaying game designer located in Indianapolis, Indiana. I started Winking Cat Studio as a way to organize my personal, academic, and professional projects.`,
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

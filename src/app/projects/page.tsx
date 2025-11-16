@@ -7,6 +7,7 @@ const logoSewerScum = '/images/logos/logoSewerScum.png'
 const logoDiceCats = '/images/logos/diceCats.png'
 const logoTensorFlow = '/images/logos/tensorFlow.png'
 const logoOpenCV = '/images/logos/openCV.png'
+const logoRPI = '/images/logos/raspberrryPiLogo.png'
 
 const projects = [
   {
@@ -50,6 +51,16 @@ const projects = [
       label: 'github.com',
     },
     logo: logoOpenCV,
+  },
+  {
+    name: 'Flask Server Camera Dice Robot',
+    description:
+      'Raspberry Pi with Flask server, camera, and servos: roll your favorite dice from anywhere.',
+    link: {
+      href: 'https://github.com/winkingcatstudio/iot-rpi-flask-dice-robot',
+      label: 'github.com',
+    },
+    logo: logoRPI,
   },
 ]
 

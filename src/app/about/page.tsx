@@ -78,8 +78,8 @@ export default function About() {
               some of them out on my projects page.`}
             </p>
             <p>
-              {`I have a strong background in Object-Oriented Programming and
-              software design principles, and enjoy programming in a variety of
+              {`I have a strong background in object-oriented programming and
+              software design principles, and I enjoy programming in a variety of
               languages including Python, Ruby, C#, TypeScript, JavaScript, and
               more. Feel free to browse other areas of interest on my skills
               page.`}
@@ -87,14 +87,14 @@ export default function About() {
             <p>
               {`My coding skills are supplemented with over 8 years of experience
               in IT support and {projectManagementYears} years of experience in
-              project management. In addition to a degree in Computer Science, I
-              also have degrees in History and Philosophy. During my free time,
+              project management. In addition to a degree in computer science, I
+              also have degrees in history and philosophy. During my free time,
               I enjoy tabletop gaming with friends and spending time with my
               partner and our pets.`}
             </p>
             <p>
-              {`Outside of software developement, I'm the founder of Dice Cats LLC. We're a
-              small independent publisher specializing in tablestop roleplaying
+              {`Outside of software development, I'm the founder of Dice Cats LLC. We're a
+              small independent publisher specializing in tabletop roleplaying
               games. Our newest game, SEWER SCUM, releases in early 2026. It's a
               pulp-fueled plunge into dystopian 1980s NYC inspired by '80s
               action movies and comics. Learn more about it on my projects page.`}

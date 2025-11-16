@@ -44,7 +44,7 @@ export default function Skills() {
   return (
     <SimpleLayout
       title="Skills and tools I use to design, build, deliver, and support impactful products."
-      intro="I'm a full-stack developer and designer, who bridges technical depth with creative problem-solving. Here's a look at the core technologies and principles I use in my work."
+      intro="I'm a full-stack developer and designer who bridges technical depth with creative problem-solving. Here's a look at the core technologies and principles I use in my work."
     >
       <div className="space-y-20">
         {/* --- Programming --- */}
@@ -56,10 +56,10 @@ export default function Skills() {
             clarity and long-term scalability.`}
           </Tool>
           <Tool title="Web Technologies">
-            {`My recent work has centered around modern web stacks, React,
-            Next.js, Node, Ruby on Rails, enhanced with frameworks Tailwind
-            and Express. I build full-stack applications that are fast,
-            accessible, and resilient.`}
+            {`My recent work has centered around modern web stacks such as React, 
+            Next.js, Node, and Ruby on Rails, enhanced with supporting frameworks 
+            like Tailwind and Express. I build full-stack applications that are 
+            fast, accessible, and resilient.`}
           </Tool>
           <Tool title="Databases">
             {`I've worked extensively with relational and NoSQL databases,
@@ -95,8 +95,8 @@ export default function Skills() {
           </Tool>
           <Tool title="DevOps">
             {`I've set up and maintained production environments using tools like
-            Nginx, Puppet, Nagios, and Capistrano, ensuring smooth deployments
-            and reliable uptime.`}
+            Nginx, Puppet, Nagios, and Capistrano, ensuring smooth deployments 
+            and high reliability.`}
           </Tool>
         </ToolsSection>
 
@@ -112,7 +112,7 @@ export default function Skills() {
             preparing assets for both print and digital media.`}
           </Tool>
           <Tool title="Typesetting">
-            {`With a background in history and publishing, I have a strong
+            {`With a background in the humanities and publishing, I have a strong
             appreciation for clean, creative, and stylish typesetting, adapting
             my approach to fit the needs of each project while enhancing
             readability and visual impact.`}
