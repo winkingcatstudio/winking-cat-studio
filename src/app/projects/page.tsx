@@ -13,7 +13,7 @@ const projects = [
   {
     name: 'SEWER SCUM',
     description: `A pulp-fueled plunge into dystopian 1980s NYC. A tabletop RPG inspired by '80s action movies.`,
-    link: { href: 'https://dicecats.com/sewerscum', label: 'COMING SOON!' },
+    link: { href: 'https://www.kickstarter.com/projects/dice-cats/sewer-scum', label: 'kickstarter.com' },
     logo: logoSewerScum,
   },
   {
