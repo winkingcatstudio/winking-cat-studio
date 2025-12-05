@@ -218,7 +218,7 @@ function Resume() {
     },
     {
       company: 'Purdue - Krannert Computing Center',
-      title: 'Computer Support Specialst',
+      title: 'Computer Support Specialist',
       logo: logoPurdue,
       start: '2010',
       end: '2013',
